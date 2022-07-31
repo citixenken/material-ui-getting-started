@@ -1,9 +1,11 @@
 import React from "react";
+import Container from "@material-ui/core/Container";
 import Typography from "@material-ui/core/Typography";
+import Button from "@material-ui/core/Button";
 
 export default function Create() {
   return (
-    <div>
+    <Container>
       <Typography
         variant="h6"
         component="h2"
@@ -12,7 +14,16 @@ export default function Create() {
       >
         Create Page
       </Typography>
-      Create Page
-    </div>
+
+      <Button
+        type="submit"
+        color="secondary"
+        variant="contained"
+        // disableElevation
+        onClick={() => console.log("I was clicked!")}
+      >
+        Submit
+      </Button>
+    </Container>
   );
 }

@@ -5,11 +5,30 @@ import Button from "@material-ui/core/Button";
 import AddShoppingCartRoundedIcon from "@material-ui/icons/AddShoppingCartRounded";
 import KeyboardArrowRightRoundedIcon from "@material-ui/icons/KeyboardArrowRightRounded";
 import SendRoundedIcon from "@material-ui/icons/SendRounded";
+import { makeStyles } from "@material-ui/core";
+
+const useStyles = makeStyles({
+  btn: {
+    fontSize: 60,
+    backgroundColor: "violet",
+    "&:hover": {
+      backgroundColor: "green",
+    },
+  },
+  title: {
+    textDecoration: "underline",
+    marginBottom: 20,
+  },
+});
 
 export default function Create() {
+  const classes = useStyles();
+
+  console.log(classes);
   return (
     <Container>
       <Typography
+        className={classes.title}
         variant="h6"
         component="h2"
         color="textSecondary"
@@ -19,6 +38,7 @@ export default function Create() {
       </Typography>
 
       <Button
+        className={classes.btn}
         type="submit"
         color="secondary"
         variant="contained"
